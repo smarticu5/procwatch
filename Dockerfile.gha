@@ -1,0 +1,8 @@
+FROM summerwind/actions-runner:v2.320.0-ubuntu-20.04-96d1bbc
+
+ENV NAME=procwatch
+
+COPY ./procwatch /procwatch
+COPY ./start-gha.sh /start.sh
+
+ENTRYPOINT ["/start.sh"]

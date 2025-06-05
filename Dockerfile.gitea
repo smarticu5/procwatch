@@ -1,0 +1,8 @@
+FROM gitea/act_runner:latest
+
+ENV NAME=procwatch
+
+COPY ./procwatch /procwatch
+COPY ./start-gitea.sh /start.sh
+
+ENTRYPOINT ["/start.sh"]
